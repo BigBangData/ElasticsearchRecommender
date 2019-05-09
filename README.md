@@ -1,6 +1,6 @@
 # Elasticsearch Recommender System for Online Purchases
 
-as
+
 
 ## Synopsis
 
@@ -124,7 +124,7 @@ system index filled up with "documents" (see Note on Terminology below):
 
 *Elasticsearch Indices*
 
-![image: ESrecommender_index](images/ESrecommender_index.jpg) 
+![image: ESrecommender_index](./images/ESrecommender_index.JPG) 
 
 
 
@@ -149,7 +149,7 @@ left) and Consumer (bottom left) and QueryElasticsearch.py on the right side:
 
 *Demo*
 
-![image: Demo](images/Demo.gif) 
+![image: Demo](./images/Demo.gif) 
 
 
 
@@ -171,7 +171,7 @@ just visualize it as a timeline in Kibana if timestamps (dates) data is availabl
 
 *Kibana Timeline*
 
-![image: Kibana Timeline](images/Kibana_Timeline.jpg) 
+![image: Kibana Timeline](./images/Kibana_Timeline.JPG) 
 
 ---
 
