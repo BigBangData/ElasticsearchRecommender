@@ -133,6 +133,6 @@ if __name__ == '__main__':
 
         p.flush()
         print("Done flushing")
-        time.sleep(15)
+        time.sleep(15) # time to kill the producer so as not to duplicate data
 
 
