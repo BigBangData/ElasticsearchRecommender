@@ -97,15 +97,15 @@ def ETL_msg(msg):
     # fling into ES
     r = requests.post("http://elasticsearch:9200/recommender_system/basket", json=msg)
 	
-	# if there is an error, display the code 
+    # if there is an error, display the code 
     if r.status_code != 201:
         print(" "*100)
         print("*"*80)
         print("Error sending message: status code " +str(r.status_code))
 	
-	# else print the basket being consumed (uncomment pass and comment print for quicker consumer)
+    # else print the basket being consumed (uncomment pass and comment print for quicker consumer)
     else:
-		#pass
+    #pass
         print("consumed basket " +msg['InvoiceNo'])
 		
 
