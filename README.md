@@ -19,7 +19,7 @@ To sum: build an Item-Item recommender (as opposed to a User-Item one) for a dyn
 
 ## The Dataset
 
-Since current, streaming online purchase data is proprietary and unavailable and this is just a proof-of-concept project, we used old yet real online purchase data from 01/12/2010 to 09/12/2011
+Since current, streaming online purchase data is proprietary and unavailable and this is just a proof-of-concept project, we used old yet real online purchase data from 01/12/2010 to 09/12/2011.
 
 The dataset and a detailed description of it can be found and downloaded here at the [UCI Machine Learning Repository - Online Retail Data Set.](https://archive.ics.uci.edu/ml/datasets/online+retail#)
 
