@@ -14,6 +14,7 @@ import time
 import ujson
 import pandas as pd
 import requests
+import urllib2
 from retrying import retry
 from confluent_kafka.admin import AdminClient, NewTopic
 from confluent_kafka import Producer
@@ -77,8 +78,15 @@ if __name__ == '__main__':
     
     while True:
 	
-        # READ DATA -- ideally, hit an endpoint and stream  
-	# reading from local file
+        # READ DATA -- ideally, hit an endpoint and stream 
+        
+	#file_path='https://archive.ics.uci.edu/ml/machine-learning-databases/\
+        #                                            00352/Online%20Retail.xlsx'
+        #response=urllib2.urlopen(file_path)
+        #html=response.read()
+
+        
+        # reading from local file instead
         # convert Excel file to CSV if first time 
         if os.path.isfile('./Online Retail.xlsx') == True:
             pass
