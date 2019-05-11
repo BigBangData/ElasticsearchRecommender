@@ -51,8 +51,7 @@ to get good recommenations.*
 
 
 The Kafka producer and consumer simulate a more realistic scenario in that they produce a real-time stream of data. Since the consumer is slower, I had to slow down the producer 
-using a 0.5 second wait time, which in computer terms is an eternity. (It is possible 0.5 secs was overkill, change it at will.) This prevents a `BufferError: Local: Queue full` error 
-as the producer gets over 10,000 messages ahead of the consumer. 
+using a 0.1 second wait time. It is possible 0.1 seconds was overkill. This prevents a `BufferError: Local: Queue full` error as the producer gets over 10,000 messages ahead of the consumer. 
 
 **FIRST**, run the producer in one terminal, then run the consumer in another terminal. The commands should be simple:
 
@@ -183,10 +182,11 @@ just visualize it as a timeline in Kibana if timestamps (dates) data is availabl
 
 - *Kibana Visualizations*: future implementations might include Kibana visualizations.
 
+- *Fix Streaming Solution*: research Kafka producer and consumer sync other than a time wait. Also seems to be wasting or repeating baskets. 
 
-- *Turn on Analyzer*: 
+- *CSV file issue*: just noticed a problem with how the CSV file is created (5/10/2019).
 
-This turned out to be the hardest challenge of the project. Elasticsearch has various analyzers that help divide text (such as a long product description in our case) 
+- *Turn on Analyzer*: This turned out to be the hardest challenge of the project. Elasticsearch has various analyzers that help divide text (such as a long product description in our case) 
 into terms on word boundaries. By default, Elasticsearch uses a `standard analyzer` (see [Elasticsearch Analyzers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html)). 
 When I performed the aggregation to get to the basket-level, this analyzer caused problems (an HTTP status code 400: Bad Request Error) so I tured it off with `index: not_analyzed` 
 in the Lucene query passed to Elasticsearch. The consequence is that the user has to know the exact product name to be able to query the system. The products list is huge 
