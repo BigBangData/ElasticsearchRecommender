@@ -105,8 +105,8 @@ def ETL_msg(msg):
 	
     # else print the basket being consumed (uncomment pass and comment print for quicker consumer)
     else:
-    #pass
-    print("consumed basket " +msg['InvoiceNo'])
+        #pass
+        print("consumed basket " +msg['InvoiceNo'])
 		
 
 # Run 
