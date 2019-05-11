@@ -190,9 +190,7 @@ just visualize it as a timeline in Kibana if timestamps (dates) data is availabl
 into terms on word boundaries. By default, Elasticsearch uses a `standard analyzer` (see [Elasticsearch Analyzers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html)). 
 When I performed the aggregation to get to the basket-level, this analyzer caused problems (an HTTP status code 400: Bad Request Error) so I tured it off with `index: not_analyzed` 
 in the Lucene query passed to Elasticsearch. The consequence is that the user has to know the exact product name to be able to query the system. The products list is huge 
-so it wouldn't make sense to list all products.
-
-Ideally, the solution would involve finding out why the standard analyzer didn't allow aggregation in the "Descriptions" field. I created a simplistic product-lookup that does not 
+so it wouldn't make sense to list all products. Ideally, the solution would involve finding out why the standard analyzer didn't allow aggregation in the "Descriptions" field. I created a simplistic product-lookup that does not 
 perform very well, at least in the dynamic implementation of this product. Perhaps after cleaning up product names better this workaround I made would work better (something to test), otherwise, a better 
 solution should be implemented. 
 
