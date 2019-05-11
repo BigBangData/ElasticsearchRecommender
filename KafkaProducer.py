@@ -14,7 +14,7 @@ import time
 import ujson
 import pandas as pd
 import requests
-import urllib2
+#import urllib2
 from retrying import retry
 from confluent_kafka.admin import AdminClient, NewTopic
 from confluent_kafka import Producer
@@ -84,7 +84,6 @@ if __name__ == '__main__':
         #                                            00352/Online%20Retail.xlsx'
         #response=urllib2.urlopen(file_path)
         #html=response.read()
-
         
         # reading from local file instead
         # convert Excel file to CSV if first time 
@@ -108,7 +107,7 @@ if __name__ == '__main__':
         # iterate over each group (each invoice)
         for invoice_name, invoice in invoice_groups:
 		
-            time.sleep(0.5) # remove or reduce value, added to sync with slower consumer
+            time.sleep(0.1) # remove or reduce value, added to sync with slower consumer
             basket = {}
             stockcodes = []
             descriptions = []
