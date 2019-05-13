@@ -12,7 +12,7 @@ version  : 3.7.2
 import pandas as pd
 import requests 
 import json
-import os 
+import os
 from elasticsearch import Elasticsearch
 
 # Setup functions
@@ -123,16 +123,16 @@ if __name__ == "__main__":
 
 	# READ DATA 
 	# convert Excel file to CSV if first time 
-	if os.path.isfile('./Online Retail.xlsx') == True:
+	if os.path.isfile('./Online Retail.csv') == True:
 		pass
 	else:
-		df = pd.read_excel("Online Retail.xlsx")
-		# filter out missing data (~25% CustomerIDs are NA)
-		df = df.dropna()
-		# change CustomerID to integer
-		df['CustomerID'] = df['CustomerID'].astype(int)
-		# save as CSV 
-		df.to_csv("Online_Retail.csv", index=False)
+            df = pd.read_excel("Online Retail.xlsx")
+            # filter out missing data (~25% CustomerIDs are NA)
+            df = df.dropna()
+            # change CustomerID to integer
+            df['CustomerID'] = df['CustomerID'].astype(int)
+            # save as CSV 
+            df.to_csv("Online_Retail.csv", index=False)
 
 	# read in CSV
 	df = pd.read_csv('Online_Retail.csv')

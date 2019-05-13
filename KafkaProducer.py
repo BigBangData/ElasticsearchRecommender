@@ -87,7 +87,7 @@ if __name__ == '__main__':
         
         # reading from local file instead
         # convert Excel file to CSV if first time 
-        if os.path.isfile('./Online Retail.xlsx') == True:
+        if os.path.isfile('./Online Retail.csv') == True:
             pass
         else:
             df = pd.read_excel("Online Retail.xlsx")
