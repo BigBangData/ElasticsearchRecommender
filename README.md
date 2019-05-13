@@ -184,7 +184,6 @@ just visualize it as a timeline in Kibana if timestamps (dates) data is availabl
 
 - *Fix Streaming Solution*: research Kafka producer and consumer sync other than a time wait. Also seems to be wasting or repeating baskets. 
 
-- *CSV file issue*: just noticed a problem with how the CSV file is created (5/10/2019).
 
 - *Turn on Analyzer*: This turned out to be the hardest challenge of the project. Elasticsearch has various analyzers that help divide text (such as a long product description in our case) 
 into terms on word boundaries. By default, Elasticsearch uses a `standard analyzer` (see [Elasticsearch Analyzers](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html)). 
