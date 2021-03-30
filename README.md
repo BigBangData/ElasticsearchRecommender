@@ -5,7 +5,7 @@
 ## Synopsis
 
 This repo contains a final project submitted for the course [Unstructured and Distributed Data Analysis and Modeling,](https://github.com/sstirlin/MSBX5420Spring2019) 
-taught by Spencer Stirling, in partial fullfillment of the degree of Masters of Business Analytics at the University of Colorado - Boulder.
+taught by [Spencer Stirling](https://github.com/sstirlin), in partial fullfillment of the degree of Master of Science in Business Analytics (Security Track) at the University of Colorado - Boulder.
 
 The inspiration is drawn from this article: [A recommender system for ingredients in recipes.](https://qbox.io/blog/building-simple-recommender-systems-for-elasticsearch-1) 
 
